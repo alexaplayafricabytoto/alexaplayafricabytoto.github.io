@@ -1,0 +1,14 @@
+body {
+    background-color: yellow
+}
+
+.vidya {
+    border: 5px groove green;
+    background-color: greenyellow;
+
+}
+
+.center {
+    margin: 0 auto;
+    display:block;
+}

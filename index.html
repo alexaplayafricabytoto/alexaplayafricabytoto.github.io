@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <p>Enter secret passphrase below:</p>
+  <input id="check" type="text" name="check" />
+  <video class="vidya" width="480" height="480" src="africa.mp4" hidden muted loop />
+</body>
+<script>
+$(document).ready(function() {
+    $('#check').keydown(function() {
+        if($(this).val() === 'alexa play africa by toto') {
+            $('.vidya').prop('muted', false)
+            $('.vidya').prop('autoplay', true)
+            $('.vidya').removeAttr('hidden');
+            $('.vidya').addClass('center')
+        }
+    });
+});
+</script>
+</html>
