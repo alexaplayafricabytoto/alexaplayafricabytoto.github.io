@@ -4,7 +4,7 @@ body {
 
 .vidya {
     border: 5px groove green;
-    background-color: greenyellow;
+    background: linear-gradient(141deg, yellow 0%, yellowgreen 51%, greenyellow 70%, green 90%);
 
 }
 
