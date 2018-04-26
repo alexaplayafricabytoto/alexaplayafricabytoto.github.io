@@ -8,16 +8,17 @@
 <body>
   <p>Enter secret passphrase below:</p>
   <input id="check" type="text" name="check" />
-  <video class="vidya" width="480" height="480" src="/africa.mp4" hidden muted loop />
+  <video class="vidya" width="480" height="480" src="africa.mp4" hidden muted loop controls />
 </body>
 <script>
 $(document).ready(function() {
     $('#check').keydown(function() {
         if($(this).val() === 'alexa play africa by toto') {
-            $('.vidya').prop('muted', false)
-            $('.vidya').prop('autoplay', true)
+            $('.vidya').prop('muted', false);
+            $('.vidya').prop('autoplay', true);
             $('.vidya').removeAttr('hidden');
-            $('.vidya').addClass('center')
+            $('.vidya').addClass('center');
+            $('.button').removeAttr('hidden');
         }
     });
 });
