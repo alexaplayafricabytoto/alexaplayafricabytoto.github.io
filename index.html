@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -12,12 +13,15 @@
 </body>
 <script>
 $(document).ready(function() {
-    $('#check').keydown(function() {
-        if($(this).val() === 'alexa play africa by toto') {
-            $('.vidya').prop('muted', false);
-            $('.vidya').prop('autoplay', true);
-            $('.vidya').removeAttr('hidden');
-            $('.vidya').addClass('center');
+    $('#check').bind('keypress', function(e) {
+        var code = e.keyCode
+        if(code == 13) {
+            if($(this).val().includes("alexa play")) {
+                $('.vidya').prop('muted', false);
+                $('.vidya').prop('autoplay', true);
+                $('.vidya').removeAttr('hidden');
+                $('.vidya').addClass('center');
+            }
         }
     });
 });
